@@ -3,8 +3,8 @@ hero:
   title: react-echarts
   desc: Apache ECharts component for React（基于 React 的 Apache ECharts 组件）
   actions:
-    - text: Demo
-      link: /demo
+    - text: 快速开始 →
+      link: /docs
 footer: Open-source MIT Licensed | Copyright © 2021-present
 ---
 
