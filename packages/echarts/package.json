@@ -1,6 +1,6 @@
 {
   "name": "@twp0217/react-echarts",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Apache ECharts component for React",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@twp0217/react-echarts-core": "^5.0.0",
+    "@twp0217/react-echarts-core": "^5.1.0",
     "resize-observer-polyfill": "^1.5.1"
   }
 }
