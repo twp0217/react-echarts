@@ -1,7 +1,11 @@
-import * as echartsCore from 'echarts/core';
 import React from 'react';
 import useSize from './hooks/useSize';
-import { EChartsCoreProps, EchartsInstance, EChartsRef } from './interface';
+import {
+  EChartsCoreProps,
+  EchartsInstance,
+  EChartsRef,
+  EChartsType,
+} from './interface';
 
 const EChartsCore = React.forwardRef(
   (props: EChartsCoreProps, ref: React.Ref<EChartsRef>) => {
@@ -37,12 +41,12 @@ const EChartsCore = React.forwardRef(
      * 创建ECharts实例
      */
     const initECharts = (): void => {
-      if (echartsContainerRef.current && echarts) {
-        echartsInstanceRef.current = echarts.init(
+      if (echartsContainerRef.current) {
+        echartsInstanceRef.current = (echarts as EChartsType).init(
           echartsContainerRef.current,
           theme,
           initOpts,
-        ) as EchartsInstance;
+        );
         if (onChartInit) {
           onChartInit(echartsInstanceRef.current);
         }
@@ -132,7 +136,6 @@ const EChartsCore = React.forwardRef(
 );
 
 EChartsCore.defaultProps = {
-  echarts: echartsCore,
   autoResize: false,
   loading: false,
 };

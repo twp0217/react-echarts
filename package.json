@@ -8,12 +8,13 @@
     "docs:deploy": "gh-pages -d docs-dist",
     "build": "father-build",
     "deploy": "npm run docs:build && npm run docs:deploy",
-    "release": "npm run build && npm publish --access public",
+    "release": "npm run build && lerna publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "commit": "git-cz",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "bootstrap": "lerna bootstrap"
   },
   "repository": {
     "type": "git",
@@ -31,9 +32,6 @@
     "url": "https://github.com/twp0217/react-echarts/issues"
   },
   "homepage": "https://github.com/twp0217/react-echarts#readme",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -46,9 +44,9 @@
     ]
   },
   "peerDependencies": {
+    "echarts": ">=5.0.1",
     "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
-    "echarts": ">=5.0.1"
+    "react-dom": ">=16.9.0"
   },
   "dependencies": {
     "resize-observer-polyfill": "^1.5.1"
@@ -62,6 +60,7 @@
     "echarts": "^5.0.1",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
+    "lerna": "^4.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "yorkie": "^2.0.0"

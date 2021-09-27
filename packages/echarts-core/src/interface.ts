@@ -1,10 +1,8 @@
 import * as echartsCore from 'echarts/core';
-import * as echarts from 'echarts';
 
 type EChartsInitType = typeof echartsCore.init;
-export type ECharts = typeof echartsCore | typeof echarts;
-export type EChartsCoreOption = echartsCore.EChartsCoreOption;
-export type EChartsOption = echarts.EChartsOption;
+export type EChartsType = typeof echartsCore;
+export type EChartsOption = echartsCore.EChartsCoreOption;
 export type EChartsTheme = Parameters<EChartsInitType>['1'];
 export type EChartsInitOpts = Parameters<EChartsInitType>['2'];
 export type EchartsInstance = echartsCore.EChartsType;
@@ -21,10 +19,8 @@ export interface EChartsLoadingConfig {
   opts?: object;
 }
 
-export interface EChartsCoreProps<
-  O extends EChartsCoreOption = EChartsCoreOption,
-> {
-  echarts?: ECharts;
+export interface EChartsCoreProps<O extends EChartsOption = EChartsOption> {
+  echarts: any;
   className?: string;
   style?: React.CSSProperties;
   option?: O;
@@ -37,9 +33,6 @@ export interface EChartsCoreProps<
   onChartInit?: (echartsInstance: EchartsInstance) => void;
   onEvents?: { [eventName: string]: (event: any) => void };
 }
-
-export interface EChartsProps<O extends EChartsOption = any>
-  extends Omit<EChartsCoreProps<O>, 'echarts'> {}
 
 export interface EChartsRef {
   echartsInstance: EchartsInstance;

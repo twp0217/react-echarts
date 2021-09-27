@@ -1,0 +1,36 @@
+{
+  "name": "@twp0217/react-echarts",
+  "version": "5.0.0",
+  "description": "Apache ECharts component for React",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twp0217/react-echarts.git"
+  },
+  "keywords": [
+    "react",
+    "echarts",
+    "react-component",
+    "react-echarts"
+  ],
+  "author": "twp0217",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twp0217/react-echarts/issues"
+  },
+  "homepage": "https://github.com/twp0217/react-echarts#readme",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "peerDependencies": {
+    "echarts": ">=5.0.1",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@twp0217/react-echarts-core": "^5.0.0",
+    "resize-observer-polyfill": "^1.5.1"
+  }
+}

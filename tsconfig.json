@@ -9,11 +9,9 @@
     "sourceMap": true,
     "baseUrl": "./",
     "strict": true,
-    "paths": {
-      "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
-    },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules",

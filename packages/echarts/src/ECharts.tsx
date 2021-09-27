@@ -1,5 +1,5 @@
 import React from 'react';
-import EChartsCore from './EChartsCore';
+import EChartsCore from '@twp0217/react-echarts-core';
 import { EChartsProps, EChartsRef } from './interface';
 import * as echarts from 'echarts';
 
