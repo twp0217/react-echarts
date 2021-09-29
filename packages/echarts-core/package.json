@@ -1,6 +1,6 @@
 {
   "name": "@twp0217/react-echarts-core",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Apache ECharts component for React",
   "repository": {
     "type": "git",
