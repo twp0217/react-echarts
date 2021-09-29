@@ -1,5 +1,7 @@
 # react-echarts-core
 
+> **按需引入 ECharts 图表和组件**
+
 Apache ECharts component for React（基于 React 的 Apache ECharts 组件）
 
 ## 安装

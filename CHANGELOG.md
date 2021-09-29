@@ -1,3 +1,11 @@
+# [5.1.1](https://github.com/twp0217/react-echarts/compare/v5.1.0...v5.1.1) (2021-09-29)
+
+# [5.1.0](https://github.com/twp0217/react-echarts/compare/v5.0.0...v5.1.0) (2021-09-28)
+
+### Features
+
+- 重构成 lerna 管理包，将包分成 react-echarts-core 和 react-echarts
+
 # 5.0.0 (2021-09-25)
 
 ### Features
