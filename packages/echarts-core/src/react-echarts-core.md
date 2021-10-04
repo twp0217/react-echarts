@@ -9,4 +9,4 @@ nav:
   path: /docs
 ---
 
-<embed src="../packages/echarts-core/README.md"></embed>
+<embed src="../README.md"></embed>
