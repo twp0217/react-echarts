@@ -1,4 +1,5 @@
 import React from 'react';
+import { ResizeObserver } from '@juggle/resize-observer';
 
 type Size = { width?: number; height?: number };
 
