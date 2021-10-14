@@ -33,7 +33,7 @@ export default () => {
 
   return (
     <>
-      <ECharts option={option} theme={theme} style={{ height: 400 }} />
+      <ECharts option={option} theme={theme} />
       <button onClick={() => toggleTheme()}>default</button>
       <button onClick={() => toggleTheme('dark')}>dark</button>
       <button onClick={() => toggleTheme(walden)}>walden</button>

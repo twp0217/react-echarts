@@ -36,7 +36,7 @@ export default () => {
     ],
   };
 
-  return <ECharts option={option} style={{ height: 400 }} />;
+  return <ECharts option={option} />;
 };
 ```
 

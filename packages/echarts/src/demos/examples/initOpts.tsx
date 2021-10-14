@@ -29,7 +29,6 @@ export default () => {
       initOpts={{
         renderer: 'svg',
       }}
-      style={{ height: 400 }}
     />
   );
 };

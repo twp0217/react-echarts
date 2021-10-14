@@ -33,7 +33,6 @@ export default () => {
   return (
     <ECharts
       option={option}
-      style={{ height: 400 }}
       onChartInit={onChartInit}
       onEvents={{
         click: (event: any) => {

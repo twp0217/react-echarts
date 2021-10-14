@@ -35,7 +35,7 @@ export default () => {
 
   return (
     <>
-      <ECharts ref={echartsRef} option={option} style={{ height: 400 }} />
+      <ECharts ref={echartsRef} option={option} />
       <button onClick={() => print()}>打印echartsInstance</button>
       <button onClick={() => callMethod('showLoading')}>showLoading()</button>
       <button onClick={() => callMethod('hideLoading')}>hideLoading()</button>

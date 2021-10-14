@@ -42,10 +42,15 @@ const EChartsCore = React.forwardRef(
      */
     const initECharts = (): void => {
       if (echartsContainerRef.current) {
+        const offsetHeight = echartsContainerRef.current.offsetHeight;
+        const newInitOpts = {
+          ...initOpts,
+          height: initOpts?.height || offsetHeight || 400,
+        };
         echartsInstanceRef.current = (echarts as EChartsType).init(
           echartsContainerRef.current,
           theme,
-          initOpts,
+          newInitOpts,
         );
         if (onChartInit) {
           onChartInit(echartsInstanceRef.current);

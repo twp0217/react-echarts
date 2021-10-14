@@ -52,7 +52,5 @@ export default () => {
     ],
   };
 
-  return (
-    <EChartsCore option={option} style={{ height: 400 }} echarts={echarts} />
-  );
+  return <EChartsCore option={option} echarts={echarts} />;
 };

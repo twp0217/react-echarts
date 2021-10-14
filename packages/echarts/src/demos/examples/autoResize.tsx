@@ -23,5 +23,5 @@ export default () => {
     ],
   };
 
-  return <ECharts option={option} autoResize style={{ height: 400 }} />;
+  return <ECharts option={option} autoResize />;
 };

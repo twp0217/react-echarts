@@ -33,7 +33,6 @@ export default () => {
     <>
       <ECharts
         option={option}
-        style={{ height: 400 }}
         loading={loading}
         loadingConfig={{
           opts: {

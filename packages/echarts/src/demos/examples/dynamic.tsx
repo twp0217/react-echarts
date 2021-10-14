@@ -88,5 +88,5 @@ export default () => {
     }, 1000);
   }, []);
 
-  return <ECharts option={option} style={{ height: 400 }} />;
+  return <ECharts option={option} />;
 };
