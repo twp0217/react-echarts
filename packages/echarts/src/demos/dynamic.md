@@ -1,14 +1,14 @@
 ---
-order: 5
+order: 6
 group:
   title: react-echarts
   path: /
   order: 2
 nav:
   title: 演示
-  path: /demo
+  path: /demos
 ---
 
-## autoResize
+## dynamic
 
-<code src="../examples/autoResize.tsx" />
+<code src="./examples/dynamic.tsx" />

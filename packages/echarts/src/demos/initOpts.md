@@ -6,9 +6,9 @@ group:
   order: 2
 nav:
   title: 演示
-  path: /demo
+  path: /demos
 ---
 
 ## initOpts
 
-<code src="../examples/initOpts.tsx" />
+<code src="./examples/initOpts.tsx" />

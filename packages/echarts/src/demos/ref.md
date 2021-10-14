@@ -1,14 +1,14 @@
 ---
-order: 9
+order: 2
 group:
   title: react-echarts
   path: /
   order: 2
 nav:
   title: 演示
-  path: /demo
+  path: /demos
 ---
 
-## event
+## ref
 
-<code src="../examples/event.tsx" />
+<code src="./examples/ref.tsx" />

@@ -6,11 +6,11 @@ group:
   order: 1
 nav:
   title: 演示
-  path: /demo
+  path: /demos
 ---
 
 ## import
 
 > 按需引入
 
-<code src="../examples/import.tsx" />
+<code src="./examples/import.tsx" />
