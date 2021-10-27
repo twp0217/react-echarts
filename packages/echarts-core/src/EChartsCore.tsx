@@ -1,11 +1,6 @@
 import React from 'react';
 import useSize from './hooks/useSize';
-import {
-  EChartsCoreProps,
-  EchartsInstance,
-  EChartsRef,
-  EChartsType,
-} from './interface';
+import { EChartsCoreProps, EchartsInstance, EChartsRef } from './interface';
 
 const EChartsCore = React.forwardRef(
   (props: EChartsCoreProps, ref: React.Ref<EChartsRef>) => {
@@ -20,6 +15,7 @@ const EChartsCore = React.forwardRef(
       autoResize,
       loading,
       loadingConfig,
+      group,
       onChartInit,
       onEvents,
     } = props;
@@ -47,11 +43,11 @@ const EChartsCore = React.forwardRef(
           ...initOpts,
           height: initOpts?.height || offsetHeight || 400,
         };
-        echartsInstanceRef.current = (echarts as EChartsType).init(
+        echartsInstanceRef.current = echarts.init(
           echartsContainerRef.current,
           theme,
           newInitOpts,
-        );
+        ) as EchartsInstance;
         if (onChartInit) {
           onChartInit(echartsInstanceRef.current);
         }
@@ -115,6 +111,15 @@ const EChartsCore = React.forwardRef(
       }
     };
 
+    /**
+     * 设置图表分组
+     */
+    const setGroup = (): void => {
+      if (echartsInstanceRef.current && group) {
+        echartsInstanceRef.current.group = group;
+      }
+    };
+
     React.useEffect(() => {
       initECharts();
       return () => {
@@ -133,6 +138,10 @@ const EChartsCore = React.forwardRef(
     React.useEffect(() => {
       toggleLoading();
     }, [loading]);
+
+    React.useEffect(() => {
+      setGroup();
+    }, [group]);
 
     return (
       <div ref={echartsContainerRef} className={className} style={style} />
