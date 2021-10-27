@@ -27,16 +27,20 @@ export default () => {
     ],
   };
 
-  const toggleTheme = (theme?: EChartsTheme) => {
-    setTheme(theme);
+  const toggleTheme = (newTheme?: EChartsTheme) => {
+    setTheme(newTheme);
   };
 
   return (
     <>
       <ECharts option={option} theme={theme} />
       <button onClick={() => toggleTheme()}>default</button>
-      <button onClick={() => toggleTheme('dark')}>dark</button>
-      <button onClick={() => toggleTheme(walden)}>walden</button>
+      <button style={{ marginLeft: 8 }} onClick={() => toggleTheme('dark')}>
+        dark
+      </button>
+      <button style={{ marginLeft: 8 }} onClick={() => toggleTheme(walden)}>
+        walden
+      </button>
     </>
   );
 };

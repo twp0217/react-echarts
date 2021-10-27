@@ -2,7 +2,7 @@ import React from 'react';
 import ECharts, { EChartsOption, EChartsRef } from '@twp0217/react-echarts';
 
 export default () => {
-  const echartsRef = React.useRef<EChartsRef>();
+  const echartsRef = React.useRef<EChartsRef>(null);
 
   const option: EChartsOption = {
     title: {
@@ -26,19 +26,27 @@ export default () => {
   };
 
   const print = () => {
-    console.log('echartsInstance', echartsRef.current.echartsInstance);
+    console.log('echartsInstance', echartsRef.current?.echartsInstance);
   };
 
-  const callMethod = (method: string) => {
-    echartsRef.current.echartsInstance[method]();
+  const showLoading = () => {
+    echartsRef.current?.echartsInstance.showLoading();
+  };
+
+  const hideLoading = () => {
+    echartsRef.current?.echartsInstance.hideLoading();
   };
 
   return (
     <>
       <ECharts ref={echartsRef} option={option} />
-      <button onClick={() => print()}>打印echartsInstance</button>
-      <button onClick={() => callMethod('showLoading')}>showLoading()</button>
-      <button onClick={() => callMethod('hideLoading')}>hideLoading()</button>
+      <button onClick={() => print()}>print echartsInstance</button>
+      <button style={{ marginLeft: 8 }} onClick={() => showLoading()}>
+        showLoading()
+      </button>
+      <button style={{ marginLeft: 8 }} onClick={() => hideLoading()}>
+        hideLoading()
+      </button>
     </>
   );
 };

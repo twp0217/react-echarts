@@ -1,5 +1,5 @@
 ---
-order: 99
+order: 9
 group:
   title: react-echarts
   path: /
@@ -9,6 +9,6 @@ nav:
   path: /demos
 ---
 
-## event
+## group
 
-<code src="./examples/event.tsx" />
+<code src="./examples/group.tsx" />
