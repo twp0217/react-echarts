@@ -39,3 +39,8 @@ export interface EChartsCoreProps<O extends EChartsCoreOption = EChartsOption> {
 export interface EChartsRef {
   echartsInstance: EchartsInstance;
 }
+
+export interface EChartsContextProps
+  extends Pick<EChartsCoreProps, 'theme' | 'autoResize'> {}
+
+export * from './context';

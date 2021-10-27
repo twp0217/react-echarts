@@ -1,4 +1,5 @@
 import React from 'react';
+import EChartsContext from './context';
 import useSize from './hooks/useSize';
 import { EChartsCoreProps, EchartsInstance, EChartsRef } from './interface';
 
@@ -23,6 +24,8 @@ const EChartsCore = React.forwardRef(
     const echartsContainerRef = React.useRef<HTMLDivElement>(null);
     const echartsInstanceRef = React.useRef<EchartsInstance | null>(null);
 
+    const { theme: contextTheme, autoResize: contextAutoResize } =
+      React.useContext(EChartsContext);
     const { width, height } = useSize(
       echartsContainerRef.current || document.body,
     );
@@ -45,7 +48,7 @@ const EChartsCore = React.forwardRef(
         };
         echartsInstanceRef.current = echarts.init(
           echartsContainerRef.current,
-          theme,
+          theme || contextTheme,
           newInitOpts,
         ) as EchartsInstance;
         if (onChartInit) {
@@ -90,7 +93,7 @@ const EChartsCore = React.forwardRef(
      * 调整大小
      */
     const resize = (): void => {
-      if (autoResize && echartsInstanceRef.current) {
+      if ((autoResize || contextAutoResize) && echartsInstanceRef.current) {
         echartsInstanceRef.current.resize();
       }
     };
@@ -125,7 +128,7 @@ const EChartsCore = React.forwardRef(
       return () => {
         disposeECharts();
       };
-    }, [echartsContainerRef, theme, initOpts]);
+    }, [echartsContainerRef, theme, contextTheme, initOpts]);
 
     React.useEffect(() => {
       setOption();
