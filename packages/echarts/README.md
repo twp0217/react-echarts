@@ -44,7 +44,7 @@ export default () => {
 
 ### EChartsProps
 
-> 参考[`EChartsCoreProps`](https://github.com/twp0217/react-echarts/tree/main/packages/echarts/README.md)，差异 API 如下：
+> 参考[`EChartsCoreProps`](https://github.com/twp0217/react-echarts/tree/main/packages/echarts-core#api)，差异 API 如下：
 
 | 名称        | 说明             | 类型        | 默认值 |
 | ----------- | ---------------- | ----------- | ------ |

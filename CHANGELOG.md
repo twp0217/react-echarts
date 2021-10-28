@@ -1,3 +1,15 @@
+# [5.2.1](https://github.com/twp0217/react-echarts/compare/v5.2.0...v5.2.1) (2021-10-28)
+
+### Features
+
+- 增加全局化配置
+
+# [5.2.0](https://github.com/twp0217/react-echarts/compare/v5.1.1...v5.2.0) (2021-10-27)
+
+### Features
+
+- 增加图表联动
+
 # [5.1.1](https://github.com/twp0217/react-echarts/compare/v5.1.0...v5.1.1) (2021-09-29)
 
 # [5.1.0](https://github.com/twp0217/react-echarts/compare/v5.0.0...v5.1.0) (2021-09-28)
