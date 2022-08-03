@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import EChartsContext from './context';
 import useSize from './hooks/useSize';
@@ -147,7 +148,11 @@ const EChartsCore = React.forwardRef(
     }, [group]);
 
     return (
-      <div ref={echartsContainerRef} className={className} style={style} />
+      <div
+        ref={echartsContainerRef}
+        className={classNames('react-echarts', className)}
+        style={style}
+      />
     );
   },
 );

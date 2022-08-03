@@ -30,6 +30,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@juggle/resize-observer": "^3.3.1"
+    "@juggle/resize-observer": "^3.3.1",
+    "classnames": "^2.3.1"
   }
 }
