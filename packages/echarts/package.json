@@ -1,6 +1,6 @@
 {
   "name": "@twp0217/react-echarts",
-  "version": "5.2.2",
+  "version": "5.2.3",
   "description": "Apache ECharts component for React",
   "repository": {
     "type": "git",
@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.3.1",
-    "@twp0217/react-echarts-core": "^5.2.2"
+    "@twp0217/react-echarts-core": "^5.2.3"
   }
 }
